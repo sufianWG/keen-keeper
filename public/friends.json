@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aarif Hasan",
+    "picture": "https://images.pexels.com/photos/3474629/pexels-photo-3474629.jpeg",
+    "email": "aarif.hasan@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university during first year. We still catch up about football and weekend hangouts.",
+    "goal": 14,
+    "next_due_date": "2026-06-12"
+  },
+  {
+    "id": 2,
+    "name": "Nafis Rahman",
+    "picture": "https://images.pexels.com/photos/29204802/pexels-photo-29204802.jpeg",
+    "email": "nafis.rahman@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Former colleague who gives practical career advice and checks in before major deadlines.",
+    "goal": 14,
+    "next_due_date": "2026-06-24"
+  },
+  {
+    "id": 3,
+    "name": "Samiul Karim",
+    "picture": "https://images.pexels.com/photos/7465477/pexels-photo-7465477.jpeg",
+    "email": "samiul.karim@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["school", "gaming"],
+    "bio": "Old school friend who loves online co-op games and late-night tech talks.",
+    "goal": 15,
+    "next_due_date": "2026-06-17"
+  },
+  {
+    "id": 4,
+    "name": "Tanvir Hossain",
+    "picture": "https://images.pexels.com/photos/32270249/pexels-photo-32270249.jpeg",
+    "email": "tanvir.hossain@gmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["travel", "family friend"],
+    "bio": "Family friend who enjoys planning short trips and sharing food recommendations.",
+    "goal": 21,
+    "next_due_date": "2026-06-08"
+  },
+  {
+    "id": 5,
+    "name": "Mahin Chowdhury",
+    "picture": "https://images.pexels.com/photos/13108270/pexels-photo-13108270.jpeg",
+    "email": "mahin.chowdhury@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["startup", "coffee buddy"],
+    "bio": "Met at a startup event. We often talk about product ideas over coffee.",
+    "goal": 10,
+    "next_due_date": "2026-06-23"
+  },
+  {
+    "id": 6,
+    "name": "Farhan Kabir",
+    "picture": "https://images.pexels.com/photos/19419272/pexels-photo-19419272.jpeg",
+    "email": "farhan.kabir@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["book club", "neighbor"],
+    "bio": "Neighbor and book club partner who likes discussing novels and productivity habits.",
+    "goal": 10,
+    "next_due_date": "2026-06-17"
+  },
+  {
+    "id": 7,
+    "name": "Imran Hossain",
+    "picture": "https://images.pexels.com/photos/26926485/pexels-photo-26926485.jpeg",
+    "email": "imran.hossain@gmail.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["university", "football"],
+    "bio": "University senior who never misses a football match and always checks in during big games.",
+    "goal": 20,
+    "next_due_date": "2026-06-05"
+  },
+  {
+    "id": 8,
+    "name": "Rayed Islam",
+    "picture": "https://images.pexels.com/photos/13607325/pexels-photo-13607325.jpeg",
+    "email": "rayed.islam@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["design", "freelance"],
+    "bio": "Creative friend who helps with portfolio feedback and freelance client discussions.",
+    "goal": 12,
+    "next_due_date": "2026-06-23"
+  },
+  {
+    "id": 9,
+    "name": "Rifat Ahmed",
+    "picture": "https://images.pexels.com/photos/17218597/pexels-photo-17218597.png",
+    "email": "rifat.ahmed@gmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["gym", "routine partner"],
+    "bio": "Gym partner who keeps me accountable and shares workout plans and nutrition tips.",
+    "goal": 12,
+    "next_due_date": "2026-06-18"
+  },
+  {
+    "id": 10,
+    "name": "Sabbir Anan",
+    "picture": "https://images.pexels.com/photos/7752805/pexels-photo-7752805.jpeg",
+    "email": "sabbir.anan@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["cousin", "close friend"],
+    "bio": "My cousin and one of my closest friends. We usually talk about family matters and future plans.",
+    "goal": 14,
+    "next_due_date": "2026-06-28"
+  }
+]
