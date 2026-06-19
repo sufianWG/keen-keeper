@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className="md:flex md:justify-between items-center bg-white py-4.5 px-10 md:px-20 shadow">
-                <div className="leftSide">
+                <div className="leftSide w-fit">
                     <Link to={"/"}><img src={logoImg} alt="logo" /></Link> 
                 </div>
                 <div className="text-3xl absolute right-10 top-5 cursor-pointer md:hidden" onClick={() => setOpen(!open)}>
