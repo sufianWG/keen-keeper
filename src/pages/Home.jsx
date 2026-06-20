@@ -1,5 +1,6 @@
 import { use } from "react";
 import Banner from "../components/Banner/Banner";
+import { Link } from "react-router";
 
 const friendsDataPromise = fetch("/friends.json").then(res => res.json());
 // console.log(friendsDataPromise);
@@ -16,7 +17,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {
                             friendsData.map(friend => {
-                                return <div key={friend.id} className="text-center p-6 space-y-1 bg-white rounded-md shadow min-h-[270px] h-full flex flex-col justify-between">
+                                return <Link to={`/details/${friend.id}`}><div key={friend.id} className="text-center p-6 space-y-1 bg-white rounded-md shadow min-h-[270px] h-full flex flex-col justify-between">
                                     <div className="img-and-name">
                                         <div className="w-20 h-20 mx-auto">
                                             <img src={friend.picture} alt="" className="w-full h-full rounded-full" />
@@ -36,7 +37,7 @@ const Home = () => {
                                     <div className={`capitalize text-[0.75rem] py-1.5 px-2 rounded-full font-medium text-white ${friend.status === "almost due" ? "bg-[#EFAD44]" :
                                         friend.status === "overdue" ? "bg-[#EF4444]" : "bg-[#244D3F]"
                                         }`}>{friend.status}</div>
-                                </div>
+                                </div> </Link>
 
                             })
                         }
