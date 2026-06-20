@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../../src/pages/Home";
 import Timeline from "../../src/pages/Timeline";
 import Stats from "../../src/pages/Stats";
+import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
                 element: <Stats></Stats>
             }
 
-        ]
+        ],
+        errorElement : <NotFoundPage></NotFoundPage>
     },
 ]);
