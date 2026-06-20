@@ -34,7 +34,7 @@ const Home = () => {
                                             })
                                         }
                                     </div>
-                                    <div className={`capitalize text-[0.75rem] py-1.5 px-2 rounded-full font-medium text-white ${friend.status === "almost due" ? "bg-[#EFAD44]" :
+                                    <div className={`w-fit mx-auto capitalize text-[0.75rem] py-1.5 px-2 rounded-full font-medium text-white ${friend.status === "almost due" ? "bg-[#EFAD44]" :
                                         friend.status === "overdue" ? "bg-[#EF4444]" : "bg-[#244D3F]"
                                         }`}>{friend.status}</div>
                                 </div> </Link>
