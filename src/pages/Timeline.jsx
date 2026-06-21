@@ -7,9 +7,12 @@ import { PiPhoneCallFill } from "react-icons/pi";
 
 const Timeline = () => {
     const { timelineData } = useContext(TimelineContext);
-    // console.log(timelineData);
+    console.log(timelineData.length);
     return (
-        <div className="bg-[#F8FAFC]">
+        timelineData.length === 0 ? <div className="bg-[#F8FAFC] h-screen flex flex-col justify-center items-center gap-1">
+            <h3 className="text-5xl text-[#244D3F] font-bold">Timeline is Empty Now</h3>
+            <p className="text-[#64748B] text-base font-medium">Interact with friends to get them in timeline</p>
+            </div> : <div className="bg-[#F8FAFC]">
             <div className="w-9/12 mx-auto py-20">
                 <h1 className="text-5xl font-bold mb-6">Timeline</h1>
                 <div className="relative w-full sm:max-w-[340px] md:max-w-[347px]">
