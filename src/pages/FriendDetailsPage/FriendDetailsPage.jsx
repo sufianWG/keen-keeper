@@ -33,8 +33,8 @@ const FriendsDetailsPage = () => {
     // console.log(timelineData);
     return (
         <div className="bg-[#F8FAFC]">
-            <div className="w-9/12 mx-auto py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-9 grid-rows-8 gap-6">
-                <div className="px-8 col-span-3 row-span-4 text-center p-6 space-y-1 bg-white rounded-md shadow h-full flex flex-col justify-between">
+            <div className="w-11/12 sm:w-10/12 lg:w-9/12 mx-auto py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-9 lg:grid-rows-8 gap-4 lg:gap-6">
+                <div className="px-5 md:px-8 col-span-2 md:col-span-6 lg:col-span-3 lg:row-span-4 text-center p-4 md:p-6 space-y-1 bg-white rounded-md shadow h-full flex flex-col justify-between">
                     <div className="img-and-name">
                         <div className="w-20 h-20 mx-auto">
                             <img src={targetedFriend.picture} alt="" className="w-full h-full rounded-full" />
@@ -56,31 +56,31 @@ const FriendsDetailsPage = () => {
                         <small className="text-[#64748B] text-sm">Preferred: {targetedFriend.email}</small>
                     </div>
                 </div>
-                <div className="py-4 px-8 bg-white rounded-md shadow row-span-2 col-span-2 flex flex-col text-center justify-center items-center">
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow col-span-2 lg:row-span-2 flex flex-col text-center justify-center items-center">
                     <h1 className="text-[#244D3F] font-semibold text-3xl">{targetedFriend.days_since_contact}</h1>
                     <p className="text-lg text-[#64748B]">Days Since Contact</p>
                 </div>
-                <div className="py-4 px-8 bg-white rounded-md shadow row-span-2 col-span-2 flex flex-col text-center justify-center items-center">
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow col-span-2 lg:row-span-2 flex flex-col text-center justify-center items-center">
                     <h1 className="text-[#244D3F] font-semibold text-3xl">{targetedFriend.goal}</h1>
                     <p className="text-lg text-[#64748B]">Goal Days</p>
                 </div>
-                <div className="py-4 px-8 bg-white rounded-md shadow row-span-2 col-span-2 flex flex-col text-center justify-center items-center">
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow col-span-2 lg:row-span-2 flex flex-col text-center justify-center items-center">
                     <h1 className="text-[#244D3F] font-semibold text-3xl">{targetedFriend.next_due_date}</h1>
                     <p className="text-lg text-[#64748B]">Next Due</p>
                 </div>
-                <div className="py-4 px-8 bg-white rounded-md shadow col-span-6 row-span-2 flex flex-col justify-center">
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow col-span-2 md:col-span-6 lg:row-span-2 flex flex-col justify-center">
                     <div className="flex justify-between">
                         <h2 className="text-[#244D3F] text-xl font-medium">Relationship Goal</h2>
                         <button className="btn">Edit</button>
                     </div>
                     <p className="text-lg text-[#64748B]">Connect every <span className="text-black font-bold">30 days</span></p>
                 </div>
-                <div className="py-4 px-8 bg-white rounded-md shadow col-start-1 col-span-3 flex gap-2 items-center justify-center text-base font-medium"><RiNotificationSnoozeLine/> Snooze 2 weeks</div>
-                <div className="py-4 px-8 bg-white rounded-md shadow col-start-1 col-span-3 flex gap-2 items-center justify-center text-base font-medium"><PiArchiveBold/> Archive</div>
-                <div className="py-4 px-8 bg-white rounded-md shadow col-start-1 col-span-3 flex gap-2 items-center justify-center text-base font-medium text-red-600"><RiDeleteBinLine/> Delete</div>
-                <div className="py-4 px-8 bg-white rounded-md shadow col-start-4 row-start-5 col-span-6 row-span-3 flex flex-col justify-center gap-4">
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow lg:col-start-1 md:col-span-3 flex gap-2 items-center justify-center text-base font-medium"><RiNotificationSnoozeLine/> Snooze 2 weeks</div>
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow lg:col-start-1 lg:col-span-3 flex gap-2 items-center justify-center text-base font-medium"><PiArchiveBold/> Archive</div>
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow lg:col-start-1 col-span-2 lg:col-span-3 flex gap-2 items-center justify-center text-base font-medium text-red-600"><RiDeleteBinLine/> Delete</div>
+                <div className="py-4 px-5 md:px-8 bg-white rounded-md shadow lg:col-start-4 lg:row-start-5 md:col-span-6 lg:row-span-3 flex flex-col justify-center gap-4">
                     <h2 className="text-xl text-[#244D3F] font-medium">Quick Check-In</h2>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                          <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Call", targetedFriend)}><FiPhoneCall/>Call</Link>
                          <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Text", targetedFriend)}><BiMessageDots />Text</Link>
                          <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Video", targetedFriend)}><PiVideoCameraBold />Video</Link>
