@@ -5,6 +5,9 @@ import Timeline from "../../src/pages/Timeline";
 import Stats from "../../src/pages/Stats";
 import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 import FriendsDetailsPage from "../pages/FriendDetailsPage/FriendDetailsPage";
+import { Suspense } from "react";
+import Loading from "../components/Loading/Loading";
+
 
 export const router = createBrowserRouter([
     {
@@ -14,7 +17,7 @@ export const router = createBrowserRouter([
 
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Suspense fallback={<Loading></Loading>}><Home></Home></Suspense> 
             },
             {
                 path: "/timeline",
