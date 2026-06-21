@@ -1,16 +1,25 @@
-# React + Vite
+# KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a simple friendship tracker web application built to help users keep their important relationships active and organized. Users can view their friends, check who needs attention, log quick interactions, and monitor communication history from a clean and responsive interface.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- React Router DOM
+- Tailwind CSS
+- DaisyUI
+- Recharts
+- React Hot Toast
+- JSON
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Friend Management Dashboard
+The home page shows all friends in a structured card layout with their picture, name, tags, contact status, and days since last contact. It also includes summary cards to give a quick overview of friendship activity.
 
-## Expanding the ESLint configuration
+### 2. Interaction Tracking Timeline
+Users can log Call, Text, and Video interactions directly from the friend details page. Every interaction is added to the timeline page with friend details.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Friendship Analytics
+The stats page displays a pie chart showing the total number of Call, Text, and Video interactions. This helps users quickly understand their communication pattern.
