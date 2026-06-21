@@ -10,7 +10,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     const { timelineData } = useContext(TimelineContext);
 
-    const navLinkClass = ({isActive}) => `py-3 px-4 text-base flex items-center gap-1 bg-gray-200 mb-1 lg:mb-auto lg:bg-white hover:bg-[#244D3F] hover:rounded-md hover:text-white hover:font-bold transition-all duration-500 ${isActive ? "bg-[#244D3F] text-white rounded-md": ""}`;
+    const navLinkClass = ({isActive}) => `py-3 px-4 text-base flex items-center gap-1 border-t-3 border-[#244D3F] md:border-none hover:bg-[#244D3F] lg:hover:rounded-md hover:text-white hover:font-bold transition-all duration-500 ${isActive ? "bg-[#244D3F] text-white lg:rounded-md": ""}`;
     return (
         <nav>
             <div className="md:flex md:justify-between items-center bg-white py-4.5 px-10 md:px-20 shadow">
