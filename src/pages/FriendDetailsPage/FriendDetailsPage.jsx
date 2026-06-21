@@ -1,21 +1,39 @@
+import { useContext } from "react";
 import { BiMessageDots } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import { PiArchiveBold, PiVideoCameraBold } from "react-icons/pi";
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
 import { Link, useLoaderData, useParams } from "react-router";
+import { TimelineContext } from "../../Context/TimelineContext";
+import { toast } from "react-toastify";
 
 const FriendsDetailsPage = () => {
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const freindsData = useLoaderData()
     // console.log(freindsData);
     const targetedFriend = freindsData.find(friend => friend.id === parseInt(id));
     // console.log(targetedFriend);
+    const {timelineData, setTimelineData} = useContext(TimelineContext);
+    // console.log("timelineData:", timelineData, "setTimelineData :", setTimelineData);
+    const handleAddTimelineData = (type, timelineDetails) => {
+            // console.log("type:", type, "timelineData:", timelineData);
+            const newTimelineData = {
+                ...timelineDetails,
+                Action: type,
+                time: new Date().toDateString()
+            }
+            // console.log(newTimelineData);
+            setTimelineData([...timelineData, newTimelineData]);
+            // console.log(timelineDetails.name);
 
+            toast.success(`${type} with ${timelineDetails.name} Added to timeline`);            
+    }
+    // console.log(timelineData);
     return (
         <div className="bg-[#F8FAFC]">
-            <div className="w-9/12 mx-auto py-20 grid grid-cols-9 grid-rows-8 gap-6">
+            <div className="w-9/12 mx-auto py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-9 grid-rows-8 gap-6">
                 <div className="px-8 col-span-3 row-span-4 text-center p-6 space-y-1 bg-white rounded-md shadow h-full flex flex-col justify-between">
                     <div className="img-and-name">
                         <div className="w-20 h-20 mx-auto">
@@ -35,7 +53,7 @@ const FriendsDetailsPage = () => {
                     </div>
                     <div>
                         <p className="text-[#64748B] text-base italic">"{targetedFriend.bio}"</p>
-                        <small className="text-[#64748B] text-sm">Preferred: email</small>
+                        <small className="text-[#64748B] text-sm">Preferred: {targetedFriend.email}</small>
                     </div>
                 </div>
                 <div className="py-4 px-8 bg-white rounded-md shadow row-span-2 col-span-2 flex flex-col text-center justify-center items-center">
@@ -63,9 +81,9 @@ const FriendsDetailsPage = () => {
                 <div className="py-4 px-8 bg-white rounded-md shadow col-start-4 row-start-5 col-span-6 row-span-3 flex flex-col justify-center gap-4">
                     <h2 className="text-xl text-[#244D3F] font-medium">Quick Check-In</h2>
                     <div className="grid grid-cols-3 gap-4">
-                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center"><FiPhoneCall/>Call</Link>
-                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center"><BiMessageDots />Text</Link>
-                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center"><PiVideoCameraBold />Video</Link>
+                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Call", targetedFriend)}><FiPhoneCall/>Call</Link>
+                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Text", targetedFriend)}><BiMessageDots />Text</Link>
+                         <Link to={""} className="p-4 bg-[#F8FAFC] border-[#E9E9E9] border rounded-md shadow text-lg flex flex-col justify-center items-center" onClick={() => handleAddTimelineData("Video", targetedFriend)}><PiVideoCameraBold />Video</Link>
                     </div>
                 </div>
             </div>
